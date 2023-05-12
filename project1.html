@@ -35,11 +35,11 @@
             <div class="container px-4 px-lg-5 text-center">
                 <h1 class="mb-1">Module Portfolio</h1>
                 <h3 class="mb-5"><em>Robotic Modelling and Drone Skin Design</em></h3>
-                <a class="btn btn-primary btn-xl" href="#about-the-module">Introduction</a>
+                <a class="btn btn-primary btn-xl" href="#about-the-project">Introduction</a>
             </div>
         </header>
         <!-- About-->
-        <section class="content-section bg-light" id="about-the-module">
+        <section class="content-section bg-light" id="about-the-project">
             <div class="container px-4 px-lg-5 text-center">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-10">
@@ -66,15 +66,15 @@
                             an additional goal could be to add a speaker to play songs or speech.
                             </p>
                         </p>
-                        <a class="btn btn-dark btn-xl" href="#DesignProcess">Design Process</a>
+                        <a class="btn btn-dark btn-xl" href="#design-process">Design Process</a>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Services-->
-        <section class="content-section bg-primary text-white text-center" id="Design Process">
-            <div class="container px-4 px-lg-5">
-                <div class="content-section-heading">
+        <section class="content-section bg-primary text-white text-center" id="design-process">
+            <div class="container px-4 px-lg-5 text-center">
+                <h3 class="mx-auto mb-5">
                     <h3 class="text-secondary mb-0">Design</h3>
                     <h2 class="mb-5">Design Process</h2>
                 </div>
@@ -82,8 +82,7 @@
                     <!--<script id="embedded-stl-view" src="https://embed.github.com/view/3d/mike8724/mike8724.github.io/main/stl/Michael%20Head%20Keyring%20Combined.stl"></script>-->
                 </div>
                 <h2>This Diagram provides a high level overview of a proposed design process.</h2>
-                <p>Speak to luke about mermaid diagrams in html</p>
-                
+                               
                 <h2>MoSCoW</h2>
                 <p>
                     Must:
@@ -108,7 +107,7 @@
                         <li>Contain motorised components.</li>
                     </ul>
                 </p>
-
+                <a class="btn btn-xl btn-light me-4" href="#Development">Development</a>
                 </div>
                 <!--
                 <div class="row gx-4 gx-lg-5">
@@ -127,90 +126,153 @@
             </div>
         </section>
         <!-- Callout-->
-        <section class="callout">
+        <section class="content-section bg-light" id="Development">
             <div class="container px-4 px-lg-5 text-center">
                 <h3 class="mx-auto mb-5">
-                    <br>
-                    For this project, Fusion 360 was selected for its ease of use and cost structure offering a student license.
-                    <br>
-                    <br>   
-                    Fusion 360 is an Autodesk product which offers some powerful features. When stacked up against other packages, its easy to see why people prefer it for personal and small business use.<br><br> 
-                    <p>I personally have no useful experience in CAD. But to make a gear which could be used on a robot chassis or for an intricate joint took less than 30 minutes after a little familiarity and instruction.</p>
-                    <br>
-                    <script src="https://embed.github.com/view/3d/mike8724/mike8724.github.io/main/assets/MRA_motorised_gear v5.stl"></script>
-                </h3>
-                <h6></h6>
+                    <h4>Reverse Engineering</h4>
+                    <p>
+                    The Head for the model will be Michael Alcock(The Author) <i>pictured in Fig. 1</i>.
+                    Designing a head from scratch in a CAD or sculpting software would take a long time and potentially miss out features.
+                    For this reason a method of reverse engineering the object was required.   
+                    <br><img src="/md/michael_head_front.png" alt="Michael Alcock's head">
+                    <figcaption><i>Fig. 1 - Michael Alcock's head profile picture</i></figcaption>
+                    </p>
+                    <p>Two scanners were trialled for the task. The first is a HandySCAN 3D Black Series from creaform3d.com
+                    <i>pictured in Fig.2</i>. This is a handheld unit that uses lasers to measure distance to the object and records the 
+                    changes in shape as it moves across the surface. The measurement rate is incredibly fast at 1.3mil/s. 
+                    and an accuracy of 0.025mm.</P>
+                    <img src="/md/handyscan_black_elite.png" alt="creaform3d">
+                    <figcaption><i>Fig 2. - https://www.creaform3d.com/en/portable-3d-scanner-handyscan-3d</i></figcaption>
+                    <p>The HandySCAN requires the object to use a method of location. 
+                        These are reflective markers that increase the accuracy and allow the laser to map an area. 
+                        These markers are best placed in a random format.
+                        The main limitation of the HandySCAN is it cannot deal with hair. Which is an issue for modelling heads. 
+                        This is demonstrated in <i>Fig 3.</i> using Michael Alcock's head.</p>
+                    <img src="/md/handyscan_black_elite.png" alt="creaform3d">
+                    <figcaption><i>Fig 3. - Laser reflectors used for mapping surface areas.</i></figcaption>
+                    <p>The Software used to process the scan is VXElements, supplied by creaform3d.com and the screen capture shows the outcome of a scan. 
+                        The area of beard hair is unmapped in the software as the lasers couldn’t work out what the surface was. This is evident in Fig 4.</p>
+                    <img src="/md/laser_scanned_head.png" alt="Laser scanned head">
+                    <figcaption><i>Fig 4. - Laser scanned head after software processing.</i></figcaption>
+                    <p>The HandySCAN is more suited to scanning of manufactured parts with clear surfaces such as cars and aircraft.
+                    <i>Fig. 4</i> demonstrates the limitations of the HandySCAN but also the incredible detail of the areas where the laser can detect. 
+                    Based on the results of this experiment, this device would be unsuitable for this project without a lot of editing in a sculpting package, such as Blender, due to the amount of surface detail that is missing.</P>
+                    <p>In comparison to the HandySCAN, the Artec Eva 3D scanner (https://www.artec3d.com, no date), is designed with modelling medium sized objects and is compatible with human skin, which is a well publicised feature on their website <i><a href="https://www.artec3d.com/cases/medical">Artec3d.com</a></i>. Unlike the HandySCAN using lasers to measure and map features, 
+                        Artec Eva 3D uses light and photogrammetry to map the object. This method allows for software to use algorithms to “Stitch” the image together into a solid object and requires no markers to locate itself.</p>
+                    <p>The benefit to the Artec Eva 3D for modelling a skin based object is its ability to handle different textures such as hair. 
+                        <i>Fig. 5</i> is an image of a post processed scan. In comparison to <i>Fig. 4</i> there are no areas the scanner has been unable to map.</p>
+                    <img src="/md/artec_3d_postprocessing.png" alt="artec 3d postprocessing">
+                    <figcaption><i>Fig 5. - Artec Eva 3D after processing.</i></figcaption>
+                    <p>The detail is remarkable. The hair has been handled well as reflectected in the overall model. 
+                        It would be best to remove the bumps where the hair is present as this would make it easier to work with as a physical model.
+                    To achieve this, a software package would be required. Blender is an option and will be discussed futher in the 
+                    <b>Software Selection</b> portion of this portfolio along with an alternative method.</p>
+                    <p>
+                    Another reverse engineering technique is Motion Capture which can generate movements into a 3 dimentional virtual models. 
+                    This is a popular technology used in animated films. 
+                    Warner Bros. used Motion capture for The Polar Express released in 2004 which is reviewed by Mark Harrisons (2020) review in <a href= "https://www.filmstories.co.uk/features/revisiting-the-performance-capture-animated-films-of-robert-zemeckis/">filmstories.co.uk</a>.
+                    </p>
+                    <p>
+                    Motion Capture would be very useful for replicating the authors mouth movements or facial expressions, 
+                    but this is beyond the scope of this artifact as the cost of making a model thats capable of producing the motions required for facial expressions.
+                    </p>
+                <a class="btn btn-dark btn-xl" href="#software-selection">Software Selection</a>
             </div>
         </section>
-
-        <section class="content-section bg-primary text-white" id="about-me">
-            <div class="container px-4 px-lg-5 textfa-pull-left">
-                <h2 class="mb-4">**Critical Analysis here**</h2>
+        <section class="content-section bg-primary text-white text-center" id="software-selection">
+            <div class="container px-4 px-lg-5 text-center">
                 <h3 class="mx-auto mb-5">
-                        When researching CAD packages, it was noted that some offer better features towards a specific design sector. 
-                        To help compare the differences, 5 were chosen to offer a comparison.<br><br>
-                        <h5><p>
-                        <table>
-                            <tr>
-                              <th>Company</th><th>Product</th><th>Price</th><th>Pros</th><th>Cons</th><th>Target Audience</th><th>Link</th>
-                            </tr>
-                            <tr>
-                              <td>Autodesk</td>
-                              <td>Fusion 360</td>
-                              <td>Free for Personal and student use</td>
-                              <td>
-                                <ul><li>Easy to Use</li>
-                                    <li>Real-time collaboration</li>
-                                    <li>Integrated CAD+CAM and PCB design</li>
-                            </ul></td>
-                            </tr>
-                            <tr>
-                              <td>Centro comercial Moctezuma</td>
-                              <td>Francisco Chang</td>
-                              <td>Mexico</td>
-                            </tr>
-                            <tr>
-                              <td>Ernst Handel</td>
-                              <td>Roland Mendel</td>
-                              <td>Austria</td>
-                            </tr>
-                            <tr>
-                              <td>Island Trading</td>
-                              <td>Helen Bennett</td>
-                              <td>UK</td>
-                            </tr>
-                            <tr>
-                              <td>Laughing Bacchus Winecellars</td>
-                              <td>Yoshi Tannamuri</td>
-                              <td>Canada</td>
-                            </tr>
-                            <tr>
-                              <td>Magazzini Alimentari Riuniti</td>
-                              <td>Giovanni Rovelli</td>
-                              <td>Italy</td>
-                            </tr>
-                          </table>
-                        </p></h5>
-
-                </h3>
-                <a class="btn btn-xl btn-light me-4" href="#!">About Me</a><!--Add a hyperlink to a seperate page-->
+                <h2 class="mb-4">Software Selection</h2>
+                <h3 class="mx-auto mb-5">
+                    <p>
+                        The software package required for processing images from Artec Eva 3D exports as .stl file format. This is a standard format for 3d file which is abbreviated from Standard Triangle Format or Standard Tessellation Format, depending on the source.
+                        </p>
+                        <p>
+                        When working with the .stl file generated by the Artec Eva 3D, it is possible to import <i>Fig.5</i> directly into a CAD package such as Fusion 360 or Autocad. These types of CAD packages are best used for manufacturing of components like the Stand and hinge required for creating an opening at the back of the head as.
+                        </p>
+                        <p>
+                        As previously mentioned, Blender would be a better choice for manipulation of a model like the head due to its built in sculpting tools <a href="https://www.blender.org/features/sculpting/">blender.org</a> (no date). Another advantage of using Blender is its open source licensing.
+                        Blender takes a bit of getting used to but it is possible to use the brushes to smoothen an area and cutting tools for creating eyes which is a better method than trying to use CAD packages.
+                        </p>
+                        <p>
+                        Touch sensitive devices which provide Haptic feedback could have also been an option for sculpting, <a href="https://www.3dsystems.com/haptics-devices/touch-x">3dsystems.com</a>. The Touch X is one of which the author has been trained on. A good use case for these types of devices is the training of surgeons. They provide feedback to the operator about pressure and surface contact.
+                        </p>
+                        <p>
+                        Haptic devices can be used for robotic control, collison detection, mapping and more. For this project, Blender was used instead of a Haptic Pen for its simplicity and the software was easily installed and used without the need for specialist peripherals.
+                        </p>
+                        <p>
+                        The haptic pen could have been used to touch up the model but blender was a preferred package as its tools are more familiar.
+                        </p>
+                <a class="btn btn-xl btn-light me-4" href="#prototype-manufacture">Prototype manufacturing</a><!--Add a hyperlink to a seperate page-->
                 <!--<a class="btn btn-xl btn-dark" href="#!">Look at Me!</a>-->
             </div>
         </section>
-
         <section class="content-section bg-light" id="about-the-module">
             <div class="container px-4 px-lg-5 text-center">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-10">
-                        <h2>Conclusiont</h2>
+                        <h2>Prototype Manufacturing</h2>
                         <p class="lead mb-5">
-                            **Conclusion here**
+                            <p>
+                            There are a number of options for manufacturing a prototype depending on the budget and project requirements. 
+                            3d printers using Poly(lactic acid) or PLA for short, are a popular choice. 
+                            The method requires the material to be heated and layered on top of itself. 
+                            It is strong and can create complex srtructures(Sandip Kumar Mishra et al, 2021).
+                            </p>
+                            <img src="/md/Michael_head_3d_printed.png" alt="Michaels Head being 3D printed">
+                            <figcaption><i>Fig 6. - Reduced size scanned head.</i></figcaption>
+                            <p>
+                            The 3d printer used in <i>Fig.6 </i> is an Ender 3 Pro by Creality. 
+                            It is a lower end of the range of 3d Printers available on the market with a retail price of around £210 on <a href="https://www.amazon.co.uk/Creality-Official-Meanwell-Flexible-220x220x250mm/dp/B07GYRQVYV/ref=sr_1_1_sspa?keywords=ender+3+pro&qid=1680867612&sprefix=ender%2Caps%2C151&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">amazon.co.uk</a>.
+                            The detail the printer is able to achieve is very good, The head in <i>Fig. 6</i> shows the contours in the skin that the scanner was able to map. 
+                            The over hanging areas required the printer to add support structures seen on the ear and eyes.
+                            </p>
+                            <p>
+                            Because the printed scan has been so successful and the detail achieved is remarkable, 
+                            This method of prototype manufacturing has proven to be the best option.
+                            </p>
+                            <p>
+                            Laser cutting was considered but this type of manufacturing technique is better for flat structures that dont require the detail of a face. 
+                            A laser cutter would be an option for creating a baseplate using wood or Acrylic. 
+                            Using these materials and cutting technique, 3D structures can be made by cutting multiple sections. 
+                            An example of this can be found here: <a href="https://endurancelasers.com/how-to-laser-cut-3d-objects/">endurancelasers.com</a>
+                            </p>
                         </p>
-                        <a class="btn btn-dark btn-xl" href="#skills">Skills</a> <!-- Change href to a new tab-->
+                        <a class="btn btn-dark btn-xl" href="#drone-skin-selection">Drone Skin Selection</a>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="content-section bg-primary text-white text-center" id="drone-skin-selection">
+            <div class="container px-4 px-lg-5 text-center">
+                <h3 class="mx-auto mb-5">
+                <h2 class="mb-4">Drone Skin Selection</h2>
+                <h3 class="mx-auto mb-5">
+                    <p>
+                        A latex or resin material could make the appearance of the model more "Human Like". there are some great examples of Robotic applications which are nearly identical to the humans they were modelled on. One such example is Germinoid F (https://techresearchonline.com/, 2022), pictured in Fig 7 below, which is based on a twenty year old. It is possible to colour match the pigment of skin using a dye at the time of mixing, Which Fig 7 demonstrates how accurate the colours can be mixed to match a real humans skin pigment.
+                        </p>
+                        <img src="/md/germanoidF.png" alt="Germinoid Robot">
+                        <figcaption><i>Fig 7. - Hiroshi Ishiguro's Germinoid F robot. (The robot is on the left!)</i></figcaption>
+                        <p>
+                        Latex or rubber is flexible enough for designers to use methods like wires attached to servos to create facial expressions and movements which replicate a human face. 
+                        This would require a different approach to the design process.<br>
+                        As the head is a top down design generating a solid prototype, it would be less suitable to try and use a technique such as rubber silicon, 
+                        as casting a silicon mold over the head would require the removal of the ears and nose from the 3d printed head to allow the set cast to be removed.<br>
+                        If a further prototype were commissioned, this would be an option if considered from the outset and the budget permitted its use.
+                        </p>
+                        <p>
+                        As the final 3D print pictured in <i>Fig 8</i> has retained a high quality of detail as can be observed around the eyes which are clearly of a tired and stressed Final Year Student, 
+                        it would be a shame to lose this level of detail by adding a thicker material which would deminish.
+                        Another method which may be more suitable for the head prototype would be to spray it. 
+                        This would retain the detail and create a nice finish.
+                        <img src="/md/michael_alcock_final.png" alt="Michaels Head Final 3D print">
+                        <figcaption><i>Fig 8. - Final print of 3D printed Head. </i></figcaption>
+                        </p>
+                <a class="btn btn-xl btn-light me-4" href="#prototype-manufacture">Prototype manufacturing</a><!--Add a hyperlink to a seperate page-->
+                <!--<a class="btn btn-xl btn-dark" href="#!">Look at Me!</a>-->
+            </div>
+        </section>
+
         <!-- Portfolio-->
         <section class="content-section" id="portfolio">
             <div class="container px-4 px-lg-5">
