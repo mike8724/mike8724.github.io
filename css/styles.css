@@ -295,7 +295,9 @@ kbd kbd {
 figure {
   margin: 0 0 1rem;
 }
-
+stl{
+  width: 10%;
+}
 img,
 svg {
   vertical-align: middle;
@@ -474,7 +476,9 @@ output {
 
 iframe {
   border: 0;
+  width: 100%;
 }
+
 
 summary {
   display: list-item;
