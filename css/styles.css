@@ -302,6 +302,7 @@ img,
 svg {
   vertical-align: middle;
   width: 100%;
+  max-width: 70%;
   margin: 0, auto;
 }
 
@@ -4668,6 +4669,11 @@ textarea.form-control-lg {
 .card-group > .card:not(:first-child) .card-footer {
     border-bottom-left-radius: 0;
   }
+}
+
+.icon-class, .icon-pencil {
+  width: 60px;
+  margin: 0 auto;
 }
 
 .accordion-button {
@@ -11571,7 +11577,9 @@ footer.footer .social-link:hover {
   color: #1D809F;
   height: 7rem;
   width: 7rem;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   line-height: 7.5rem;
   font-size: 2.25rem;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
