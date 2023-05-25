@@ -195,7 +195,7 @@ p {
   
 }
 @media screen and (max-width: 750px) {
-  p {
+  p, .project1 p  {
     margin-left: 1.5em;
     margin-right: 1.5em;
   }
