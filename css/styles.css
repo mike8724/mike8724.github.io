@@ -306,7 +306,7 @@ svg {
 img {
   vertical-align: middle;
   width: 100%;
-  max-width: 70%;
+  max-width: 500px;
   margin: 1rem
 }
 
@@ -611,6 +611,8 @@ progress {
 .img-fluid {
   max-width: 100%;
   height: auto;
+  margin: 0 auto;
+  padding: 0.5rem;
 }
 
 .img-thumbnail {
